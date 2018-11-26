@@ -1,0 +1,28 @@
+{
+  "name": "crm",
+  "version": "1.0.0",
+  "description": "An API built with NodeJS, Express, MongoDB and TypeScript",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "ts-node ./src/server.ts",
+    "start": "nodemon ./dist/server.js",
+    "prod": "npm run build && npm run start"
+  },
+  "keywords": [
+    "Joly",
+    "Sylvain"
+  ],
+  "author": "Sylvain Joly <sylvain.joly@edu.devinci.fr>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.11.1",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.14",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.17.3"
+  }
+}
