@@ -12,9 +12,8 @@ const SALT_FACTOR = 10;
 export let UserSchema:Schema = new Schema({
     firstname: {
         type: String,
-        required: 'Your firstname is empty ....',
-        index: { unique: true }
-    },
+        required: 'Your firstname is empty ....'
+        },
     lastname: {
         type: String,
         required: 'Your lastname is empty ...'

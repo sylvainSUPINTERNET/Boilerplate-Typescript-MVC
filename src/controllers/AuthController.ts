@@ -10,7 +10,6 @@ class AuthController extends AuthService {
         super();
     }
 
-    
     public getLoginAction = (req:Request, res: Response, next: NextFunction ):any => { // use arrow method to use the right context this (else refer to Router class not AuthService)
         return this.getLogin(req,res,next);
     }

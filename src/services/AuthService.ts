@@ -4,20 +4,20 @@ import { Request, Response, NextFunction } from 'express';
 import {User} from '../models/User';
 import {IUser} from '../models/Interfaces/IUser';
 
-export default class AuthService {
+import SfManager from '../libs/SfManager';
 
-    constructor(){}
-    
-    //using arrow method to avoid the context lost in callback and stuff like self = this;
+export default class AuthService{
+
+    context = this; // save context from this class to use it into callback methods
+
+    constructor(){    }
+
     public getLogin = (req:Request, res: Response, next: NextFunction ):any => {
-        console.log("CTRL getLoginAction -> service getLogin");
-        res
-        .status(200)
-        .json({"login": "GET"});
+        SfManager.login(res);
     }
 
 
-    public postLogin = (req:Request, res: Response, next: NextFunction ):any =>{
+    public postLogin = (req:Request, res: Response, next: NextFunction ):any => {
         res
         .status(200)
         .json({"login": "POST"});
